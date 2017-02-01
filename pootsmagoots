@@ -1,0 +1,18 @@
+travis batts [14:32]
+var res = prompt("Player one, please type in a word.");
+
+   for (var i = 0; i < res.length; i++) {
+       $("main").append("<button></button>");
+   }
+
+[14:32]
+document.onkeypress = function(e) {
+       if (res.includes(e.key)) {
+           alert("Nice! you got a letter.");
+           for (var i = 0; i < res.length; i++) {
+               if (res[i] === e.key) {
+                   $("button").eq(i).html(res[i]);
+                   winCounter++;
+                   if (winCounter === res.length) {
+                       alert("Congratulations!!! You got the word right.");
+                   }
